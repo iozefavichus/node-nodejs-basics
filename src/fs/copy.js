@@ -1,4 +1,4 @@
-import { mkdir, readdir, copyFile } from 'fs/promises';
+import { mkdir, readdir, copyFile, access, constants } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -17,6 +17,10 @@ const isExists = async (path) => {
   };
 
 const copy = async () => {
+    console.log(sourcePath);
+    console.log(await isExists(sourcePath));
+    console.log(targetPath);
+    console.log(await isExists(targetPath));
 	if (!(await isExists(sourcePath)) || await isExists(targetPath)) {
     throw new Error('FS operation failed');
   }
