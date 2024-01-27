@@ -17,10 +17,10 @@ const isExists = async (path) => {
   };
 
 const copy = async () => {
-    console.log(sourcePath);
-    console.log(await isExists(sourcePath));
-    console.log(targetPath);
-    console.log(await isExists(targetPath));
+    // console.log(sourcePath);
+    // console.log(await isExists(sourcePath));
+    // console.log(targetPath);
+    // console.log(await isExists(targetPath));
 	if (!(await isExists(sourcePath)) || await isExists(targetPath)) {
     throw new Error('FS operation failed');
   }
