@@ -1,4 +1,7 @@
-// n should be received from main thread
+
+const n = parseInt(process.argv[2], 10);
+console.log(n);
+
 const nthFibonacci = (n) => n < 2 ? n : nthFibonacci(n - 1) + nthFibonacci(n - 2);
 
 const sendResult = () => {
